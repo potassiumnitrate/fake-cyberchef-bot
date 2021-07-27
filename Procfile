@@ -1,1 +1,1 @@
-web: python3 fake_cyberchef_bot.py
+worker: python3 fake_cyberchef_bot.py
