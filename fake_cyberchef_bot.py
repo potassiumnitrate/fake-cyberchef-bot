@@ -10,7 +10,7 @@ import logging
 from uuid import uuid4
 #from telebot import types
 from datetime import datetime
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultArticle, ParseMode, InputTextMessageContent
+#from telegram import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultArticle, ParseMode, InputTextMessageContent
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, InlineQueryHandler
 from telegram.utils.helpers import escape_markdown
 
