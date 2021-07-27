@@ -8,7 +8,7 @@ import telegram
 import telebot
 import logging
 from uuid import uuid4
-from telebot import types
+from telebot import *
 from datetime import datetime
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultArticle, ParseMode, InputTextMessageContent
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, InlineQueryHandler
