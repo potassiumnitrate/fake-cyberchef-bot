@@ -1,0 +1,1 @@
+worker: python fake_cyberchef_bot.py

@@ -1,0 +1,13 @@
+certifi==2020.12.5
+chardet==4.0.0
+click==8.0.1
+click-plugins==1.1.1
+colorama==0.4.4
+idna==2.10
+Pillow==8.2.0
+qrcode==7.2
+requests==2.25.1
+selenium==3.141.0
+shodan==1.25.0
+urllib3==1.26.4
+XlsxWriter==1.4.3
