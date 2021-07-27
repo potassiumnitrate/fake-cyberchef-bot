@@ -13,3 +13,7 @@ urllib3==1.26.4
 XlsxWriter==1.4.3
 python-telegram-bot
 telebot==0.0.3
+tornado>=6.1
+APScheduler==3.6.3
+pytz>=2018.6
+cachetools==4.2.2
