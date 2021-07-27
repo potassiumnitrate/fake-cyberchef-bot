@@ -54,9 +54,10 @@ def help(message):
 @bot.message_handler(commands=['tobase64'])
 def tobase64(message):
     try:
-        string = str(message.text).split(" ", 1)[1]
+        string = str(message.text)
         if not string:
             raise ValueError
+        string = str(message.text).split(" ", 1)[1]
         string.isascii()
         string_bytes = string.encode('ascii')
         base64_bytes = base64.b64encode(string_bytes)
@@ -73,9 +74,10 @@ def tobase64(message):
 @bot.message_handler(commands=['frombase64'])
 def frombase64(message):
     try:
-        base64_string = str(message.text).split(" ", 1)[1]
+        base64_string = str(message.text)
         if not base64_string:
             raise ValueError
+        base64_string = str(message.text).split(" ", 1)[1]
         base64_string.isascii()
         base64_bytes = base64_string.encode('ascii')
         string_bytes = base64.b64decode(base64_bytes)
@@ -91,9 +93,10 @@ def frombase64(message):
 @bot.message_handler(commands=['generateQR'])
 def generateQR(message):
     try:
-        string = str(message.text).split(" ", 1)[1]
+        string = str(message.text)
         if not string:
             raise ValueError
+        string = str(message.text).split(" ", 1)[1]
         img = qrcode.make(string)
     except:
         bot.reply_to(message,
