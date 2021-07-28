@@ -34,11 +34,17 @@ def start(message):
 def help(message):
     bot.reply_to(message, 
         "Commands:\n" + 
-        "1. /start - Description\n" + 
-        "2. /help  - This message\n" + 
-        "3. /tobase64 <type your own message> \n" +
-        "4. /frombase64 <type your own base64 message> \n" +
-        "5. /generateQR <type your own message>")
+        "/start - Description\n" +
+        "/help  - This message\n" +
+        "1. /todec <type your own message> \n" +
+        "2. /fromdec <type your own message> \n" +
+        "3. /tohex <type your own message> \n" +
+        "4. /fromhex <type your own message> \n" +
+        "5. /tobase64 <type your own message> \n" +
+        "6. /frombase64 <type your own base64 message> \n" +
+        "7. /encoderot13 <type your own message> \n" +
+        "8. /decoderot13 <type your own message> \n" +
+        "9. /generateQR <type your own message>")
 
 # command - /todec
 @bot.message_handler(commands=['todec'])
