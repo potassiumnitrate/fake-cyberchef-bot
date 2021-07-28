@@ -37,13 +37,13 @@ def help(message):
         "/start - Description\n" +
         "/help  - This message\n" +
         "1. /todec <type your own message> \n" +
-        "2. /fromdec <type your own message> \n" +
+        "2. /fromdec <type your own dec message> \n" +
         "3. /tohex <type your own message> \n" +
-        "4. /fromhex <type your own message> \n" +
+        "4. /fromhex <type your own hex message> \n" +
         "5. /tobase64 <type your own message> \n" +
         "6. /frombase64 <type your own base64 message> \n" +
         "7. /encoderot13 <type your own message> \n" +
-        "8. /decoderot13 <type your own message> \n" +
+        "8. /decoderot13 <type your own rot13 message> \n" +
         "9. /generateQR <type your own message>")
 
 # command - /todec
