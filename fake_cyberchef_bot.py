@@ -17,15 +17,15 @@ from datetime import datetime
 import base64
 import qrcode
 from io import BytesIO
+import os
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
 logger = logging.getLogger(__name__)
 
-token = None
-with open("token.txt") as f:
-    token = f.read().strip()
+token = os.environ["token"]
+
 bot = telebot.TeleBot(token)
 #bot.send_message(message.chat.id,'Hello!')
 
