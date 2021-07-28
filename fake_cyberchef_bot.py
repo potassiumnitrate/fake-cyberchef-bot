@@ -23,7 +23,9 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-token = "1925350189:AAGAdlsxBUr2iCSRF1ZpegJst45p0lUdQvE"
+token = NONE
+with open("token.txt") as f:
+    token = f.read().strip()
 bot = telebot.TeleBot(token)
 #bot.send_message(message.chat.id,'Hello!')
 
