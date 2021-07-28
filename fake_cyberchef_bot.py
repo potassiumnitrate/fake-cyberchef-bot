@@ -1,18 +1,7 @@
-'''
-from flask import Flask, request
-from telebot.credentials import token, bot_username
-'''
 # initialize bot ---------------------------------------------------------------------------------------------------------------------------------------------------
 # import everything
-#import telegram
 import telebot
 import logging
-from uuid import uuid4
-#from telebot import types
-from datetime import datetime
-#from telegram import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultArticle, ParseMode, InputTextMessageContent
-#from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, InlineQueryHandler
-#from telegram.utils.helpers import escape_markdown
 
 import base64
 import qrcode
@@ -24,13 +13,10 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
+# Get token from heroku
 token = os.environ["token"]
 
 bot = telebot.TeleBot(token)
-#bot.send_message(message.chat.id,'Hello!')
-
-# date & time format
-format_ = "%d-%m-%Y %H%M"
 
 # commands ---------------------------------------------------------------------------------------------------------------------------------------------------------
 # command - /start
@@ -109,19 +95,5 @@ def generateQR(message):
         img.save(bio, 'JPEG')
         bio.seek(0)
         bot.send_photo(message.chat.id, photo=bio)
-        # bot.reply_to(message, img)
-
-# query handler ----------------------------------------------------------------------------------------------------------------------------------------------------
-
-'''@bot.callback_query_handler(func=lambda call: True)
-def query_handler(call):
-    bot.answer_callback_query(callback_query_id=call.id, text = "Answer processing...")
-    answer = "You replied no.\nWhyyyyy :-("
-    if call.data == '0':
-        answer = "You replied yes.\nYay! :-D"
-
-    bot.send_message(call.message.chat.id, answer)
-    bot.edit_message_reply_markup(call.message.chat.id, call.message.message_id)
-'''
 
 bot.polling()
