@@ -23,7 +23,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-token = NONE
+token = None
 with open("token.txt") as f:
     token = f.read().strip()
 bot = telebot.TeleBot(token)
